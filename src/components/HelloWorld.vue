@@ -1,53 +1,77 @@
 <template>
   <div class="hello">
+    <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+      <li>
+        <md-button target="_blank" href="https://vuejs.org">Core Docs</md-button>
+      </li>
+      <li>
+        <md-button target="_blank" href="https://forum.vuejs.org">Forum</md-button>
+      </li>
+      <li>
+        <md-button target="_blank" href="https://chat.vuejs.org">Community Chat</md-button>
+      </li>
+      <li>
+        <md-button target="_blank" href="https://twitter.com/vuejs">Twitter</md-button>
+      </li>
       <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
+      <li>
+        <md-button target="_blank" href="http://vuejs-templates.github.io/webpack/">Docs for This Template</md-button>
+      </li>
     </ul>
     <h2>Ecosystem</h2>
     <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
+      <li>
+        <md-button target="_blank" href="http://router.vuejs.org/">vue-router</md-button>
+      </li>
+      <li>
+        <md-button target="_blank" href="http://vuex.vuejs.org/">vuex</md-button>
+      </li>
+      <li>
+        <md-button target="_blank" href="http://vue-loader.vuejs.org/">vue-loader</md-button>
+      </li>
+      <li>
+        <md-button target="_blank" href="https://github.com/vuejs/awesome-vue">awesome-vue</md-button>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
-  },
-};
+  export default {
+    name: 'HelloWorld',
+    data() {
+      return {
+        msg: 'Welcome to Vue.js App',
+      };
+    },
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+  .hello {
+    margin-top: 60px;
+    text-align: center;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-a {
-  color: #42b983;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #42b983;
+  }
 </style>
