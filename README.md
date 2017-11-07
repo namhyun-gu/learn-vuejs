@@ -1,4 +1,4 @@
-# learn-vue.js
+# learn-vue.js [![Build Status](https://travis-ci.org/namhyun-gu/learn-vuejs.svg?branch=master)](https://travis-ci.org/namhyun-gu/learn-vuejs)
 
 > A Vue.js project
 
