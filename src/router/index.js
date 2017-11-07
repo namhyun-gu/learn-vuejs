@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import Main from '@/components/Main';
 import HelloWorld from '@/components/HelloWorld';
 
 Vue.use(Router);
@@ -8,8 +9,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: HelloWorld,
+      name: 'Main',
+      component: Main,
+      children: [
+        {
+          path: '/',
+          component: HelloWorld,
+        },
+      ],
     },
   ],
 });
