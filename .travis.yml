@@ -4,7 +4,7 @@ node_js:
 cache: yarn
 script:
 - yarn run lint
-- yarn run build
+- yarn run test
 deploy:
   provider: heroku
   api_key:
