@@ -7,10 +7,6 @@
       <h2 class="md-title" style="flex: 1">Learn Vue.js</h2>
     </md-toolbar>
 
-    <div>
-      <router-view/>
-    </div>
-
     <md-sidenav class="md-left" ref="leftSidenav">
       <md-whiteframe>
         <md-toolbar class="md-transparent">
@@ -24,6 +20,8 @@
         </md-list-item>
       </md-list>
     </md-sidenav>
+
+    <router-view />
   </div>
 </template>
 
