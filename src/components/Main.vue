@@ -34,6 +34,7 @@
       return {
         sidenavItems: [
           { icon: 'home', title: 'Home', route: '/' },
+          { icon: 'web', title: 'TimesViewer', route: '/times-viewer' },
         ],
       };
     },
