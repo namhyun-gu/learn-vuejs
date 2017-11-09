@@ -7,18 +7,21 @@ import TimesViewer from '@/components/TimesViewer';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
-      path: '/',
-      name: 'Main',
+      path: '',
+      name: 'main',
       component: Main,
       children: [
         {
-          path: '/',
+          path: '',
+          name: 'home',
           component: HelloWorld,
         },
         {
-          path: '/times-viewer',
+          path: 'times-viewer',
+          name: 'times-viewer',
           component: TimesViewer,
         },
       ],

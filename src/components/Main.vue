@@ -4,7 +4,7 @@
       <md-button class="md-icon-button" @click="toggleLeftSidenav">
         <md-icon>menu</md-icon>
       </md-button>
-      <h2 class="md-title" style="flex: 1">Learn Vue.js</h2>
+      <h2 class="md-title" style="flex: 1">{{ title }}</h2>
     </md-toolbar>
 
     <md-sidenav class="md-left" ref="leftSidenav">
@@ -20,21 +20,37 @@
         </md-list-item>
       </md-list>
     </md-sidenav>
-
     <router-view />
   </div>
 </template>
 
 <script>
+  /* eslint-disable quote-props,func-names,object-shorthand */
+  import _ from 'lodash';
+
   export default {
     name: 'Main',
     data() {
       return {
+        routeName: '',
         sidenavItems: [
           { icon: 'home', title: 'Home', route: '/' },
           { icon: 'web', title: 'TimesViewer', route: '/times-viewer' },
         ],
       };
+    },
+    created() {
+      this.routeName = this.$route.name;
+    },
+    watch: {
+      '$route': function () {
+        this.routeName = this.$route.name;
+      },
+    },
+    computed: {
+      title: function () {
+        return _.startCase(this.routeName).replace(' ', '');
+      },
     },
     methods: {
       toggleLeftSidenav() {
