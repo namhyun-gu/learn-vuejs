@@ -42,7 +42,7 @@
     },
     methods: {
       fetchSections() {
-        const baseUrl = 'http://api.nytimes.com/svc/news/v3/content/section-list.json';
+        const baseUrl = 'https://api.nytimes.com/svc/news/v3/content/section-list.json';
         this.$http.get(`${baseUrl}?api-key=${this.apiKey}`)
             .then((result) => {
               this.sectionList.push({

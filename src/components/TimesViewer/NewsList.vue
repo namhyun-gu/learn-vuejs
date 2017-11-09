@@ -60,7 +60,7 @@
     },
     methods: {
       fetchNews() {
-        const baseUrl = 'http://api.nytimes.com/svc/news/v3';
+        const baseUrl = 'https://api.nytimes.com/svc/news/v3';
         this.$http
             .get(`${baseUrl}/content/${this.source}/${this.section}/.json?api-key=${this.api_key}`)
             .then((result) => {
