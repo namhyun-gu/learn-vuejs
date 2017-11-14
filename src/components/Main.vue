@@ -20,7 +20,9 @@
         </md-list-item>
       </md-list>
     </md-sidenav>
-    <router-view />
+    <div class="content">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -36,6 +38,7 @@
         sidenavItems: [
           { icon: 'home', title: 'Home', route: '/' },
           { icon: 'web', title: 'TimesViewer', route: '/times-viewer' },
+          { icon: 'web', title: 'ToDoFirebase', route: '/todo-firebase' },
         ],
       };
     },

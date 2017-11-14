@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import axios from 'axios';
+import VueFire from 'vuefire';
 import VueMaterial from 'vue-material';
 import 'vue-material/dist/vue-material.css';
 
@@ -12,6 +13,7 @@ Vue.config.productionTip = false;
 
 Vue.prototype.$http = axios;
 
+Vue.use(VueFire);
 Vue.use(VueMaterial);
 
 /* eslint-disable no-new */
